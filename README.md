@@ -86,8 +86,8 @@ The following extensions are included as standard:
 * ldap
 * memcached
 * mysqli
-* oci8
 * opcache
+* pcntl
 * pcov
 * pgsql
 * redis
