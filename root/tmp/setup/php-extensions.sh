@@ -49,6 +49,10 @@ docker-php-ext-install -j$(nproc) \
 docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/
 docker-php-ext-install -j$(nproc) gd
 
+# PCNTL
+docker-php-ext-configure pcntl --enable-pcntl
+docker-php-ext-install pcntl
+
 # LDAP.
 docker-php-ext-configure ldap
 docker-php-ext-install -j$(nproc) ldap

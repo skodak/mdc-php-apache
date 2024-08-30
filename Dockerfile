@@ -1,4 +1,4 @@
-FROM php:7.4-apache-bullseye
+FROM php:7.4.33-apache-bullseye
 
 # So we can use it anywhere for conditional stuff. Keeping BC with old (non-buildkit, builders)
 ARG TARGETPLATFORM
@@ -20,9 +20,9 @@ ADD root/tmp/setup/php-extensions.sh /tmp/setup/php-extensions.sh
 RUN /tmp/setup/php-extensions.sh
 
 # Install Oracle Instantclient
-ADD root/tmp/setup/oci8-extension.sh /tmp/setup/oci8-extension.sh
-RUN /tmp/setup/oci8-extension.sh
-ENV LD_LIBRARY_PATH /usr/local/instantclient
+#ADD root/tmp/setup/oci8-extension.sh /tmp/setup/oci8-extension.sh
+#RUN /tmp/setup/oci8-extension.sh
+#ENV LD_LIBRARY_PATH /usr/local/instantclient
 
 # Install Microsoft sqlsrv.
 ADD root/tmp/setup/sqlsrv-extension.sh /tmp/setup/sqlsrv-extension.sh
