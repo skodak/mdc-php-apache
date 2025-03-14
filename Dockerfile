@@ -34,9 +34,9 @@ ADD root/tmp/setup/php-extensions.sh /tmp/setup/php-extensions.sh
 RUN /tmp/setup/php-extensions.sh
 
 # Install Oracle Instantclient
-ADD root/tmp/setup/oci8-extension.sh /tmp/setup/oci8-extension.sh
-RUN /tmp/setup/oci8-extension.sh
-ENV LD_LIBRARY_PATH /usr/local/instantclient
+#ADD root/tmp/setup/oci8-extension.sh /tmp/setup/oci8-extension.sh
+#RUN /tmp/setup/oci8-extension.sh
+#ENV LD_LIBRARY_PATH /usr/local/instantclient
 
 # Install Microsoft sqlsrv.
 ADD root/tmp/setup/sqlsrv-extension.sh /tmp/setup/sqlsrv-extension.sh
