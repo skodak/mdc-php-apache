@@ -47,7 +47,10 @@ docker-php-ext-install -j$(nproc) \
     opcache \
     pgsql \
     soap \
-    xsl
+    xsl \
+    pdo \
+    pdo_mysql \
+    pdo_pgsql
 
 # GD.
 docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/
