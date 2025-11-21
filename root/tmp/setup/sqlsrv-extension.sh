@@ -38,6 +38,8 @@ ln -fsv /opt/mssql-tools/bin/* /usr/bin
 # Need 5.12 (or later) for PHP 8.3 support
 pecl install sqlsrv-5.12.0
 docker-php-ext-enable sqlsrv
+pecl install pdo_sqlsrv-5.12.0
+docker-php-ext-enable pdo_sqlsrv
 
 # Keep our image size down..
 pecl clear-cache
