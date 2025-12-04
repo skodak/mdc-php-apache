@@ -5,6 +5,9 @@ ARG TARGETPLATFORM
 ENV TARGETPLATFORM=${TARGETPLATFORM:-linux/amd64}
 RUN echo "Building for ${TARGETPLATFORM}"
 
+# Enable Apache rewriting, can be used for HTTPS redirection.
+RUN a2enmod rewrite
+
 # Install some packages that are useful within the images.
 RUN apt-get update && apt-get install -y \
     git bc default-mysql-client-core \
