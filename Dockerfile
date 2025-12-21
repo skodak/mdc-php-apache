@@ -1,4 +1,4 @@
-FROM php:8.1.33-apache-bookworm
+FROM php:8.1.34-apache-bookworm
 
 # So we can use it anywhere for conditional stuff. Keeping BC with old (non-buildkit, builders)
 ARG TARGETPLATFORM
