@@ -1,4 +1,4 @@
-FROM php:8.4.16-apache-bookworm
+FROM php:8.4.17-apache-bookworm
 
 # So we can use it anywhere for conditional stuff. Keeping BC with old (non-buildkit, builders)
 ARG TARGETPLATFORM
@@ -42,8 +42,8 @@ RUN /tmp/setup/php-extensions.sh
 #ENV LD_LIBRARY_PATH /usr/local/instantclient
 
 # Install Microsoft sqlsrv.
-ADD root/tmp/setup/sqlsrv-extension.sh /tmp/setup/sqlsrv-extension.sh
-RUN /tmp/setup/sqlsrv-extension.sh
+#ADD root/tmp/setup/sqlsrv-extension.sh /tmp/setup/sqlsrv-extension.sh
+#RUN /tmp/setup/sqlsrv-extension.sh
 
 RUN mkdir /var/www/moodledata && chown www-data /var/www/moodledata && \
     mkdir /var/www/phpunitdata && chown www-data /var/www/phpunitdata && \
